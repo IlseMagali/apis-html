@@ -20,7 +20,7 @@
   <!-- Encabezado principal fin -->
 
   <!-- Contenedor principal -->
-  <section class="principal">
+  <section id="publicaciones" class="container">
 
   </section>
   <!-- Contenedor principal fin-->
@@ -35,7 +35,7 @@
           </a>
           <ul>
             <li>
-              <a class="btn-floating blue">
+              <a class="btn-floating blue" href="#modalComentario">
                 <i class="material-icons">
                   comment
                 </i>
@@ -69,6 +69,32 @@
   </div>
   <!-- Botones FAB (Fixed Action Buttons)fin -->
 
+  <!-- Modal Comentario (modalComentario) -->
+  <section class="container">
+
+   <div id="modalComentario" class="modal">
+     <div class="modal-content row">
+       <button class="right modal-close" type="close" name="action" data-publication="text">
+           cerrar
+       </button>
+       <div class="col s12">
+         <div class="row">
+           <div class="input-field col s12">
+              <input id="tituloComentario" type="text" class="validate" data-length="10"/>
+              <label for="title">Título</label>
+           </div>
+           <div class="input-field col s12">
+               <textarea id="comentario" class="materialize-textarea"></textarea>
+               <label for="message">Mensaje</label>
+               <button id="botonEnviar" class="btn waves-effect waves-light right cyan accent-4" type="submit" name="action" data-publication="text">
+                   Publicar
+               </button>
+           </div>
+         </div>
+       </div>
+     </div>
+
+  </section>
   <!-- Vínculos javascript  -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="assets/js/materialize.min.js"></script>
